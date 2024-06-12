@@ -20,7 +20,7 @@ export const BurgerIngredients: FC = () => {
   });
 
   const [mainsRef, inViewFilling] = useInView({
-    threshold: 0
+    threshold: 0 
   });
 
   const [saucesRef, inViewSauces] = useInView({
