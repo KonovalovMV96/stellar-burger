@@ -14,7 +14,7 @@ type TProtectedRouteProps = {
 
 export const ProtectedRoute = ({
   children,
-  onlyUnAuth
+  onlyUnAuth = false
 }: TProtectedRouteProps): ReactElement => {
   const isAuthChecked = useSelector(getAuthChecked);
   const user = useSelector(getUserData);
