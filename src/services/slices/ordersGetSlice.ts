@@ -14,9 +14,7 @@ const initialState: TOrdersGetState = {
   error: null
 };
 
-export const getOrdersUser = createAsyncThunk(`orders/getOrders`, async () =>
-  getOrdersApi()
-);
+export const getOrdersUser = createAsyncThunk(`orders/getOrders`, getOrdersApi);
 
 const ordersSlice = createSlice({
   name: 'orders',

@@ -11,9 +11,7 @@ import {
 import { deleteCookie, getCookie, setCookie } from '../../utils/cookie';
 import { TUser } from '../../utils/types';
 
-export const getUser = createAsyncThunk(`user/getUser`, async () =>
-  getUserApi()
-);
+export const getUser = createAsyncThunk(`user/getUser`, getUserApi);
 
 export const loginUser = createAsyncThunk(
   `user/loginUser`,

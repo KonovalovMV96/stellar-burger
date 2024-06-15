@@ -18,9 +18,7 @@ const initialState: TFeedSliceState = {
   error: null
 };
 
-export const getFeeds = createAsyncThunk('feed/getFeeds', async () =>
-  getFeedsApi()
-);
+export const getFeeds = createAsyncThunk('feed/getFeeds', getFeedsApi);
 
 const feedSlice = createSlice({
   name: 'feed',
