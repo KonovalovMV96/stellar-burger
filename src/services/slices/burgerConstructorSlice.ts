@@ -1,12 +1,13 @@
 import { PayloadAction, createSlice, nanoid } from '@reduxjs/toolkit';
 import { TConstructorIngredient, TIngredient } from '../../utils/types';
+import { v4 as uuidv4 } from 'uuid';
 
 type TBurgerConstructorState = {
   bun: TConstructorIngredient | null;
   ingredients: TConstructorIngredient[];
 };
 
-const initialState: TBurgerConstructorState = {
+export const initialState: TBurgerConstructorState = {
   bun: null,
   ingredients: []
 };
@@ -25,7 +26,7 @@ const burgerConstructorSlice = createSlice({
       },
       prepare: (ingredient: TIngredient) => {
         const id = nanoid();
-        return { payload: { ...ingredient, id } };
+        return { payload: { ...ingredient, id: uuidv4() } };
       }
     },
     removeIngredient: (
