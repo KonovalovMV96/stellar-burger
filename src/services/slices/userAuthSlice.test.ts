@@ -9,7 +9,7 @@ import {
 } from './userAuthSlice';
 
 describe('тестирование userAuthSlice', () => {
-  describe('тест getUser', () => {
+  describe('тестирование getUser', () => {
     const actions = {
       pending: {
         type: getUser.pending.type,
