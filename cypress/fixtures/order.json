@@ -1,0 +1,7 @@
+{
+  "success": true,
+  "name": "testNameBurger",
+  "order": {
+    "number": 123
+  }
+}
